@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINA Home Design | Boise Staging & Curation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #1a1a1a; --white: #ffffff; --gray: #f4f4f4; }
+        body { margin: 0; font-family: 'Montserrat', sans-serif; color: var(--black); background: var(--white); overflow-x: hidden; }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 40px 5%; border-bottom: 1px solid #eee; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 24px; letter-spacing: 10px; text-transform: uppercase; }
+        .nav-links a { text-decoration: none; color: var(--black); margin-left: 30px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+
+        /* Hero */
+        .hero { height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
+        .hero span { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: #999; margin-bottom: 20px; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 400; margin: 0 0 40px 0; line-height: 1.1; }
+        .cta { padding: 22px 50px; background: var(--black); color: var(--white); text-decoration: none; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; transition: 0.3s; }
+        .cta:hover { opacity: 0.8; }
+
+        /* Services Section */
+        .services { display: flex; border-top: 1px solid #eee; }
+        .service-box { flex: 1; padding: 100px 40px; text-align: center; border-right: 1px solid #eee; }
+        .service-box:last-child { border-right: none; }
+        .service-box h3 { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
+        .service-box p { font-size: 14px; color: #666; line-height: 1.8; max-width: 300px; margin: 0 auto; }
+
+        /* Footer */
+        footer { padding: 80px 5%; text-align: center; border-top: 1px solid #eee; }
+        .footer-cred { font-size: 10px; letter-spacing: 4px; color: #aaa; text-transform: uppercase; }
+
+        @media (max-width: 768px) {
+            .services { flex-direction: column; }
+            .service-box { border-right: none; border-bottom: 1px solid #eee; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">FINA</div>
+    <div class="nav-links">
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <span>Based in Boise, Idaho</span>
+    <h1>Elevated Spaces.<br>Exceptional First Impressions.</h1>
+    <a href="#contact" class="cta">Book a Consultation</a>
+</section>
+
+<section class="services">
+    <div class="service-box">
+        <h3>01. Staging</h3>
+        <p>Luxury furniture curation for vacant listings in the Treasure Valley.</p>
+    </div>
+    <div class="service-box">
+        <h3>02. Design</h3>
+        <p>Interior refinement for short-term rentals and residential updates.</p>
+    </div>
+    <div class="service-box">
+        <h3>03. Consult</h3>
+        <p>Strategic property walk-throughs and design roadmaps for homeowners.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-cred">Curated by Nicolle Fina &copy; 2026 | Boise &bull; Eagle &bull; Meridian</div>
+</footer>
+
+</body>
+</html>
