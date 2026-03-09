@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | FINA Home Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.8; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 30px 5%; border-bottom: 1px solid #eee; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 22px; letter-spacing: 8px; text-decoration: none; color: #000; }
+        .nav-links a { text-decoration: none; color: #000; margin-left: 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+
+        .about-section { display: flex; align-items: center; padding: 100px 10%; gap: 60px; }
+        .about-image { flex: 1; background: #f4f4f4; min-height: 500px; }
+        .about-content { flex: 1; }
+        .about-content h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; }
+        .about-content p { color: #555; margin-bottom: 20px; }
+
+        @media (max-width: 768px) { .about-section { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">FINA</a>
+        <div class="nav-links">
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="about-section">
+        <div class="about-image">
+            <img src="https://via.placeholder.com/600x800" style="width:100%; display:block;">
+        </div>
+        <div class="about-content">
+            <h1>Nicolle Fina</h1>
+            <p>Design is the art of storytelling within a home. Based in Boise, Idaho, Nicolle founded FINA Home Design to help sellers and homeowners realize the full potential of their spaces.</p>
+            <p>With an eye for modern mountain aesthetics and organic textures, Nicolle creates environments that don't just look beautiful—they feel like home.</p>
+        </div>
+    </div>
+</body>
+</html>
