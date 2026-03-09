@@ -11,15 +11,16 @@
         
         /* Navigation */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 40px 5%; border-bottom: 1px solid #eee; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 24px; letter-spacing: 10px; text-transform: uppercase; }
-        .nav-links a { text-decoration: none; color: var(--black); margin-left: 30px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 24px; letter-spacing: 10px; text-transform: uppercase; text-decoration: none; color: var(--black); }
+        .nav-links a { text-decoration: none; color: var(--black); margin-left: 30px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: #888; }
 
         /* Hero */
         .hero { height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
         .hero span { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: #999; margin-bottom: 20px; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 400; margin: 0 0 40px 0; line-height: 1.1; }
         .cta { padding: 22px 50px; background: var(--black); color: var(--white); text-decoration: none; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; transition: 0.3s; }
-        .cta:hover { opacity: 0.8; }
+        .cta:hover { background: #444; }
 
         /* Services Section */
         .services { display: flex; border-top: 1px solid #eee; }
@@ -41,18 +42,18 @@
 <body>
 
 <nav>
-    <div class="logo">FINA</div>
+    <a href="index.html" class="logo">FINA</a>
     <div class="nav-links">
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </div>
 </nav>
 
 <section class="hero">
     <span>Based in Boise, Idaho</span>
     <h1>Elevated Spaces.<br>Exceptional First Impressions.</h1>
-    <a href="#contact" class="cta">Book a Consultation</a>
+    <a href="contact.html" class="cta">Book a Consultation</a>
 </section>
 
 <section class="services">
