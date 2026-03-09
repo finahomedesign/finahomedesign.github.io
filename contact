@@ -6,47 +6,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body { margin: 0; font-family: 'Montserrat', sans-serif; text-align: center; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 30px 5%; border-bottom: 1px solid #eee; margin-bottom: 60px; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 22px; letter-spacing: 8px; text-decoration: none; color: #000; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid #eee; margin-bottom: 60px; }
+        .main-logo { height: 70px; width: auto; }
         .nav-links a { text-decoration: none; color: #000; margin-left: 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
-
-        form { max-width: 500px; margin: 0 auto; text-align: left; padding: 0 20px; }
-        label { display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; color: #888; }
-        input, textarea, select { width: 100%; padding: 15px; margin-bottom: 30px; border: 1px solid #eee; font-family: inherit; }
+        form { max-width: 500px; margin: 0 auto; text-align: left; padding: 0 20px 100px; }
+        label { display: block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; color: #888; }
+        input, select, textarea { width: 100%; padding: 15px; margin-bottom: 25px; border: 1px solid #eee; font-family: inherit; box-sizing: border-box; }
         button { width: 100%; padding: 20px; background: #000; color: #fff; border: none; text-transform: uppercase; letter-spacing: 3px; cursor: pointer; }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">FINA</a>
+        <a href="index.html"><img src="logo.png" alt="FINA" class="main-logo"></a>
         <div class="nav-links">
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
-
-    <h1>Inquire</h1>
-    <p>Tell us about your project in the Treasure Valley.</p>
-
+    <h1 style="font-family: 'Playfair Display', serif; font-weight: 400;">Inquire</h1>
     <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
-        <label>Full Name</label>
-        <input type="text" name="name" required>
-
-        <label>Property Address</label>
-        <input type="text" name="address" required>
-
-        <label>Service Type</label>
+        <label>Name</label><input type="text" name="name" required>
+        <label>Property Address</label><input type="text" name="address" required>
+        <label>Service</label>
         <select name="service">
             <option>Home Staging</option>
             <option>Interior Curation</option>
             <option>Consultation</option>
         </select>
-
-        <label>Message</label>
-        <textarea name="message" rows="5"></textarea>
-
-        <button type="submit">Send Message</button>
+        <label>Message</label><textarea name="message" rows="5"></textarea>
+        <button type="submit">Submit Inquiry</button>
     </form>
 </body>
 </html>
