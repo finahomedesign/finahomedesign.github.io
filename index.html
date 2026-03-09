@@ -10,17 +10,16 @@
         body { margin: 0; font-family: 'Montserrat', sans-serif; color: var(--black); background: var(--white); overflow-x: hidden; }
         
         /* Navigation */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 40px 5%; border-bottom: 1px solid #eee; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 24px; letter-spacing: 10px; text-transform: uppercase; text-decoration: none; color: var(--black); }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid #eee; }
+        .main-logo { height: 70px; width: auto; display: block; }
         .nav-links a { text-decoration: none; color: var(--black); margin-left: 30px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
         .nav-links a:hover { color: #888; }
 
         /* Hero */
-        .hero { height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
+        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
         .hero span { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: #999; margin-bottom: 20px; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 400; margin: 0 0 40px 0; line-height: 1.1; }
         .cta { padding: 22px 50px; background: var(--black); color: var(--white); text-decoration: none; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; transition: 0.3s; }
-        .cta:hover { background: #444; }
 
         /* Services Section */
         .services { display: flex; border-top: 1px solid #eee; }
@@ -29,7 +28,6 @@
         .service-box h3 { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
         .service-box p { font-size: 14px; color: #666; line-height: 1.8; max-width: 300px; margin: 0 auto; }
 
-        /* Footer */
         footer { padding: 80px 5%; text-align: center; border-top: 1px solid #eee; }
         .footer-cred { font-size: 10px; letter-spacing: 4px; color: #aaa; text-transform: uppercase; }
 
@@ -42,7 +40,7 @@
 <body>
 
 <nav>
-    <a href="index.html" class="logo">FINA</a>
+    <a href="index.html"><img src="logo.png" alt="FINA Home Design Logo" class="main-logo"></a>
     <div class="nav-links">
         <a href="gallery.html">Gallery</a>
         <a href="about.html">About</a>
