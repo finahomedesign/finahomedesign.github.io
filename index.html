@@ -15,12 +15,20 @@
         .nav-links a { text-decoration: none; color: var(--black); margin-left: 30px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
         .nav-links a:hover { color: #888; }
 
-        /* Hero */
-        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
-        .hero span { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: #999; margin-bottom: 20px; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 400; margin: 0 0 40px 0; line-height: 1.1; }
-        .cta { padding: 22px 50px; background: var(--black); color: var(--white); text-decoration: none; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; transition: 0.3s; }
-        .cta:hover { background: #333; }
+        /* Updated Hero Styling */
+.hero { 
+    height: 80vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 0 10%;
+    /* This line connects the image */
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('assets/hero-home.jpg');
+    background-size: cover;
+    background-position: center;
+}
 
         /* Services Section */
         .services { display: flex; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
