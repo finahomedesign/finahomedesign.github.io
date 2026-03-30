@@ -13,35 +13,27 @@
         .main-logo { height: 70px; width: auto; display: block; }
         .nav-links a { text-decoration: none; color: #1a1a1a; margin-left: 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
 
-        /* Header */
-        .gallery-header { text-align: center; padding: 80px 10% 40px; }
+        /* Header & Filter Tabs */
+        .gallery-header { text-align: center; padding: 80px 10% 20px; }
         .gallery-header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 400; margin: 0; }
-        .gallery-header p { color: #888; letter-spacing: 1px; text-transform: uppercase; font-size: 12px; margin-top: 10px; }
-
-        /* Masonry Grid */
-        .portfolio-grid {
-            columns: 3 300px; /* Creates 3 columns that collapse on mobile */
-            column-gap: 20px;
-            padding: 0 5% 100px;
+        
+        .filter-tabs { margin: 40px 0; display: flex; justify-content: center; gap: 30px; }
+        .filter-btn { 
+            background: none; border: none; font-family: 'Montserrat', sans-serif; 
+            font-size: 11px; letter-spacing: 3px; text-transform: uppercase; 
+            cursor: pointer; padding-bottom: 8px; border-bottom: 1px solid transparent;
+            transition: 0.3s; color: #999;
         }
+        .filter-btn.active { color: #1a1a1a; border-bottom: 1px solid #1a1a1a; }
 
-        .portfolio-item {
-            width: 100%;
-            margin-bottom: 20px;
-            break-inside: avoid; /* Prevents images from cutting off between columns */
-            overflow: hidden;
-            background: #f9f9f9;
-        }
+        /* Portfolio Grid */
+        .portfolio-grid { columns: 3 300px; column-gap: 20px; padding: 0 5% 100px; }
+        .portfolio-item { width: 100%; margin-bottom: 20px; break-inside: avoid; display: block; overflow: hidden; transition: 0.4s ease-in-out; }
+        .portfolio-item img { width: 100%; display: block; transition: 0.8s ease; }
+        .portfolio-item:hover img { transform: scale(1.03); }
 
-        .portfolio-item img {
-            width: 100%;
-            display: block;
-            transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
-        }
-
-        .portfolio-item:hover img {
-            transform: scale(1.03);
-        }
+        /* Hidden Class for Filter Logic */
+        .hide { display: none !important; }
 
         footer { padding: 60px; text-align: center; font-size: 10px; letter-spacing: 3px; color: #aaa; border-top: 1px solid #eee; text-transform: uppercase; }
     </style>
@@ -59,16 +51,50 @@
 
     <div class="gallery-header">
         <h1>Portfolio</h1>
-        <p>Curated Transformations in Boise & The Treasure Valley</p>
+        <div class="filter-tabs">
+            <button class="filter-btn active" onclick="filterGallery('all')">View All</button>
+            <button class="filter-btn" onclick="filterGallery('staging')">Home Staging</button>
+            <button class="filter-btn" onclick="filterGallery('design')">Interior Design</button>
+        </div>
     </div>
 
-    <div class="portfolio-grid">
-        <div class="portfolio-item"><img src="assets/living-room-01.jpg" alt="Staged Living Room Boise"></div>
-        <div class="portfolio-item"><img src="assets/modern-kitchen.jpg" alt="Staged Kitchen Eagle"></div>
-        <div class="portfolio-item"><img src="assets/master-suite-boise.jpg" alt="Staged Bedroom Meridian"></div>
-        </div>
+    <div class="portfolio-grid" id="galleryGrid">
+        <div class="portfolio-item staging"><img src="assets/staging-01.jpg" alt="Boise Staging Project"></div>
+        <div class="portfolio-item staging"><img src="assets/staging-02.jpg" alt="Eagle Staging Project"></div>
+        
+        <div class="portfolio-item design"><img src="assets/design-01.jpg" alt="Meridian Interior Design"></div>
+        <div class="portfolio-item design"><img src="assets/design-02.jpg" alt="Treasure Valley Design Curation"></div>
+    </div>
 
     <footer>Curated by Nicolle Fina &copy; 2026</footer>
+
+    <script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update Active Button State
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText === 'VIEW ALL')) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Filter logic
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.classList.remove('hide');
+                } else {
+                    if (item.classList.contains(category)) {
+                        item.classList.remove('hide');
+                    } else {
+                        item.classList.add('hide');
+                    }
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
