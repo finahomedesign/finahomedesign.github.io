@@ -3,35 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | FINA Home Design</title>
+    <title>Portfolio | FINA Home Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; font-family: 'Montserrat', sans-serif; }
+        body { margin: 0; font-family: 'Montserrat', sans-serif; background: #fff; color: #1a1a1a; }
+        
+        /* Navigation */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid #eee; }
-        .main-logo { height: 70px; width: auto; }
-        .nav-links a { text-decoration: none; color: #000; margin-left: 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
-        .gallery-header { text-align: center; padding: 80px 10%; }
-        .grid-container { columns: 3 300px; column-gap: 20px; padding: 0 5% 100px; }
-        .grid-item { width: 100%; margin-bottom: 20px; overflow: hidden; }
-        .grid-item img { width: 100%; display: block; transition: 0.6s ease; }
-        .grid-item:hover img { transform: scale(1.05); }
-        footer { padding: 60px; text-align: center; font-size: 10px; letter-spacing: 3px; color: #aaa; border-top: 1px solid #eee; }
+        .main-logo { height: 70px; width: auto; display: block; }
+        .nav-links a { text-decoration: none; color: #1a1a1a; margin-left: 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+
+        /* Header */
+        .gallery-header { text-align: center; padding: 80px 10% 40px; }
+        .gallery-header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 400; margin: 0; }
+        .gallery-header p { color: #888; letter-spacing: 1px; text-transform: uppercase; font-size: 12px; margin-top: 10px; }
+
+        /* Masonry Grid */
+        .portfolio-grid {
+            columns: 3 300px; /* Creates 3 columns that collapse on mobile */
+            column-gap: 20px;
+            padding: 0 5% 100px;
+        }
+
+        .portfolio-item {
+            width: 100%;
+            margin-bottom: 20px;
+            break-inside: avoid; /* Prevents images from cutting off between columns */
+            overflow: hidden;
+            background: #f9f9f9;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.03);
+        }
+
+        footer { padding: 60px; text-align: center; font-size: 10px; letter-spacing: 3px; color: #aaa; border-top: 1px solid #eee; text-transform: uppercase; }
     </style>
 </head>
 <body>
+
     <nav>
-        <a href="index.html"><img src="logo.png" alt="FINA" class="main-logo"></a>
+        <a href="index.html"><img src="logo.png" alt="FINA Home Design Logo" class="main-logo"></a>
         <div class="nav-links">
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
+
     <div class="gallery-header">
-        <h1 style="font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 400;">Our Portfolio</h1>
+        <h1>Portfolio</h1>
+        <p>Curated Transformations in Boise & The Treasure Valley</p>
     </div>
-    <div class="grid-container">
+
+    <div class="portfolio-grid">
+        <div class="portfolio-item"><img src="assets/living-room-01.jpg" alt="Staged Living Room Boise"></div>
+        <div class="portfolio-item"><img src="assets/modern-kitchen.jpg" alt="Staged Kitchen Eagle"></div>
+        <div class="portfolio-item"><img src="assets/master-suite-boise.jpg" alt="Staged Bedroom Meridian"></div>
         </div>
-    <footer>CURATED BY NICOLLE FINA &copy; 2026</footer>
+
+    <footer>Curated by Nicolle Fina &copy; 2026</footer>
+
 </body>
 </html>
