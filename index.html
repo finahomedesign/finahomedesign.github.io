@@ -11,7 +11,7 @@
         
         /* Navigation */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid #eee; }
-        .main-logo { height: 70px; width: auto; display: block; }
+        .main-logo { height: 80px; width: auto; display: block; }
         .nav-links a { text-decoration: none; color: var(--black); margin-left: 30px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
         .nav-links a:hover { color: #888; }
 
@@ -20,27 +20,35 @@
         .hero span { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: #999; margin-bottom: 20px; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 400; margin: 0 0 40px 0; line-height: 1.1; }
         .cta { padding: 22px 50px; background: var(--black); color: var(--white); text-decoration: none; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; transition: 0.3s; }
+        .cta:hover { background: #333; }
 
         /* Services Section */
-        .services { display: flex; border-top: 1px solid #eee; }
+        .services { display: flex; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
         .service-box { flex: 1; padding: 100px 40px; text-align: center; border-right: 1px solid #eee; }
         .service-box:last-child { border-right: none; }
         .service-box h3 { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
         .service-box p { font-size: 14px; color: #666; line-height: 1.8; max-width: 300px; margin: 0 auto; }
 
-        footer { padding: 80px 5%; text-align: center; border-top: 1px solid #eee; }
-        .footer-cred { font-size: 10px; letter-spacing: 4px; color: #aaa; text-transform: uppercase; }
+        /* Contact Info Section */
+        .contact-footer { padding: 100px 5%; text-align: center; background: var(--gray); }
+        .contact-footer h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 30px; font-weight: 400; }
+        .contact-details { display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
+        .contact-details a { text-decoration: none; color: var(--black); font-size: 14px; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .contact-details a:hover { border-bottom: 1px solid var(--black); }
+        
+        .footer-cred { font-size: 10px; letter-spacing: 4px; color: #aaa; text-transform: uppercase; margin-top: 40px; }
 
         @media (max-width: 768px) {
             .services { flex-direction: column; }
             .service-box { border-right: none; border-bottom: 1px solid #eee; }
+            .contact-details { flex-direction: column; gap: 20px; }
         }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html"><img src="logo.png" alt="FINA Home Design Logo" class="main-logo"></a>
+    <a href="index.html"><img src="assets/FINA Home Design.png" alt="FINA Home Design Logo" class="main-logo"></a>
     <div class="nav-links">
         <a href="gallery.html">Gallery</a>
         <a href="about.html">About</a>
@@ -65,13 +73,20 @@
     </div>
     <div class="service-box">
         <h3>03. Consult</h3>
-        <p>Strategic property walk-throughs and design roadmaps for homeowners.</p>
+        <p>Strategic property walk-throughs and professional design roadmaps.</p>
     </div>
 </section>
 
-<footer>
-    <div class="footer-cred">Curated by Nicolle Fina &copy; 2026 | Boise &bull; Eagle &bull; Meridian</div>
-</footer>
+<section class="contact-footer">
+    <h2>Get In Touch</h2>
+    <div class="contact-details">
+        <a href="tel:2084405575">(208) 440-5575</a>
+        <a href="mailto:finahomedesign@gmail.com">finahomedesign@gmail.com</a>
+        <a href="https://www.finahomedesign.com">www.finahomedesign.com</a>
+    </div>
+    <p style="font-size: 13px; color: #666; text-transform: uppercase; letter-spacing: 2px;">Nicolle Cahill | FINA Home Design</p>
+    <div class="footer-cred">Curated by Nicolle Cahill &copy; 2026 | Boise &bull; Eagle &bull; Meridian</div>
+</section>
 
 </body>
 </html>
