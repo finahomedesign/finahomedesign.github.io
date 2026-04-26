@@ -27,11 +27,31 @@
         }
         .filter-btn.active { color: #1a1a1a; border-bottom: 1px solid #1a1a1a; }
 
-        /* Portfolio Grid */
-        .portfolio-grid { columns: 3 300px; column-gap: 20px; padding: 0 5% 100px; }
-        .portfolio-item { width: 100%; margin-bottom: 20px; break-inside: avoid; display: block; overflow: hidden; transition: 0.4s ease-in-out; }
-        .portfolio-item img { width: 100%; display: block; transition: 0.8s ease; }
-        .portfolio-item:hover img { transform: scale(1.03); }
+        /* Fixed Portfolio Grid */
+        .portfolio-grid { 
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            padding: 0 5% 100px; 
+        }
+        
+        .portfolio-item { 
+            width: 100%; 
+            height: 450px; /* Forces all items to the same height */
+            overflow: hidden; 
+            display: block; 
+            transition: 0.4s ease-in-out; 
+        }
+        
+        .portfolio-item img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; /* Magic fix for lining up images evenly */
+            display: block; 
+            transition: 0.8s ease; 
+        }
+        
+        .portfolio-item:hover img { transform: scale(1.05); }
 
         /* Hidden Class for Filter Logic */
         .hide { display: none !important; }
@@ -76,7 +96,6 @@
             const items = document.querySelectorAll('.portfolio-item');
             const buttons = document.querySelectorAll('.filter-btn');
 
-            // Update Active Button State
             buttons.forEach(btn => {
                 btn.classList.remove('active');
                 if(btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText === 'VIEW ALL')) {
@@ -84,7 +103,6 @@
                 }
             });
 
-            // Filter logic
             items.forEach(item => {
                 if (category === 'all') {
                     item.classList.remove('hide');
