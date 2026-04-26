@@ -6,31 +6,86 @@
     <title>About | FINA Home Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.8; }
+        :root { --black: #1a1a1a; --white: #ffffff; --gray: #f4f4f4; }
+        body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.8; color: var(--black); }
+        
+        /* Navigation */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid #eee; }
-        .main-logo { height: 70px; width: auto; }
-        .nav-links a { text-decoration: none; color: #000; margin-left: 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
-        .about-section { display: flex; align-items: center; padding: 100px 10%; gap: 60px; }
-        .about-content h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; }
-        @media (max-width: 768px) { .about-section { flex-direction: column; } }
+        .main-logo { height: 80px; width: auto; display: block; }
+        .nav-links a { text-decoration: none; color: var(--black); margin-left: 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: #888; }
+
+        /* About Layout */
+        .about-section { 
+            display: flex; 
+            align-items: center; 
+            padding: 80px 10%; 
+            gap: 80px; 
+            min-height: 70vh;
+        }
+        
+        .about-image-container { 
+            flex: 1; 
+            box-shadow: 20px 20px 0px var(--gray); /* Editorial design element */
+        }
+        
+        .about-image-container img { 
+            width: 100%; 
+            display: block; 
+            filter: grayscale(10%); /* Subtle professional styling */
+        }
+        
+        .about-content { flex: 1; }
+        .about-content h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 3.5rem; 
+            margin-bottom: 30px; 
+            font-weight: 400;
+        }
+        
+        .about-content p { 
+            font-size: 16px; 
+            color: #444; 
+            margin-bottom: 25px; 
+        }
+
+        footer { padding: 60px; text-align: center; font-size: 10px; letter-spacing: 3px; color: #aaa; border-top: 1px solid #eee; text-transform: uppercase; }
+
+        @media (max-width: 992px) { 
+            .about-section { flex-direction: column; padding: 60px 5%; text-align: center; }
+            .about-image-container { margin-bottom: 40px; box-shadow: 10px 10px 0px var(--gray); }
+        }
     </style>
 </head>
 <body>
+
     <nav>
-        <a href="index.html"><img src="logo.png" alt="FINA" class="main-logo"></a>
+        <a href="index.html">
+            <img src="assets/FINA Home Design.png" alt="FINA Home Design Logo" class="main-logo">
+        </a>
         <div class="nav-links">
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
-    <div class="about-section">
-        <div style="flex: 1;"><img src="assets/nicolle-portrait.jpg" alt="Nicolle Fina" style="width:100%;"></div>
-        <div class="about-content" style="flex: 1;">
-            <h1>Nicolle Fina</h1>
-            <p>Design is the art of storytelling within a home. Based in Boise, Idaho, Nicolle founded FINA Home Design to help sellers and homeowners realize the full potential of their spaces.</p>
-            <p>Her signature style—a blend of modern mountain aesthetics and organic textures—creates environments that resonate with today's buyers.</p>
+
+    <section class="about-section">
+        <div class="about-image-container">
+            <img src="assets/nicolle-portrait.jpg" alt="Nicolle Cahill - FINA Home Design">
         </div>
-    </div>
+        
+        <div class="about-content">
+            <h1>Nicolle Cahill</h1>
+            <p>Design is the art of storytelling within a home. Based in Boise, Idaho, Nicolle founded FINA Home Design to help sellers and homeowners realize the full potential of their spaces.</p>
+            
+            <p>With an eye for modern mountain aesthetics and organic textures, Nicolle creates environments that don't just look beautiful—they feel like home.</p>
+            
+            <p>Whether preparing a vacant listing for the Treasure Valley market or refining a private residence in Eagle, her goal is to highlight the soul of the property and inspire an immediate connection with every visitor.</p>
+        </div>
+    </section>
+
+    <footer>Curated by Nicolle Cahill &copy; 2026 | Boise &bull; Eagle &bull; Meridian</footer>
+
 </body>
 </html>
