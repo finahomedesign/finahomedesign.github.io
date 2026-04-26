@@ -10,8 +10,9 @@
         
         /* Navigation */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid #eee; }
-        .main-logo { height: 70px; width: auto; display: block; }
-        .nav-links a { text-decoration: none; color: #1a1a1a; margin-left: 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+        .main-logo { height: 80px; width: auto; display: block; }
+        .nav-links a { text-decoration: none; color: #1a1a1a; margin-left: 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: #888; }
 
         /* Header & Filter Tabs */
         .gallery-header { text-align: center; padding: 80px 10% 20px; }
@@ -41,7 +42,9 @@
 <body>
 
     <nav>
-        <a href="index.html"><img src="logo.png" alt="FINA Home Design Logo" class="main-logo"></a>
+        <a href="index.html">
+            <img src="assets/FINA Home Design.png" alt="FINA Home Design Logo" class="main-logo">
+        </a>
         <div class="nav-links">
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About</a>
@@ -66,7 +69,7 @@
         <div class="portfolio-item design"><img src="assets/design-02.jpg" alt="Treasure Valley Design Curation"></div>
     </div>
 
-    <footer>Curated by Nicolle Fina &copy; 2026</footer>
+    <footer>Curated by Nicolle Fina &copy; 2026 | Boise &bull; Eagle &bull; Meridian</footer>
 
     <script>
         function filterGallery(category) {
