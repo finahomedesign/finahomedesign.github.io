@@ -10,12 +10,13 @@
         
         /* Navigation */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid #eee; }
-        .main-logo { height: 70px; width: auto; display: block; }
-        .nav-links a { text-decoration: none; color: #1a1a1a; margin-left: 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+        .main-logo { height: 80px; width: auto; display: block; }
+        .nav-links a { text-decoration: none; color: #1a1a1a; margin-left: 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: #888; }
 
         /* Contact Content */
         .contact-container {
-            height: 60vh;
+            height: 65vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -23,34 +24,38 @@
             padding: 0 10%;
         }
 
-        h1 { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 400; margin-bottom: 20px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 400; margin-bottom: 30px; }
         
-        .email-link {
-            font-size: 18px;
+        .contact-link {
+            font-size: 20px;
             color: #1a1a1a;
             text-decoration: none;
             border-bottom: 1px solid #1a1a1a;
             padding-bottom: 5px;
+            margin: 15px 0;
             transition: opacity 0.3s ease;
+            display: inline-block;
         }
 
-        .email-link:hover { opacity: 0.6; }
+        .contact-link:hover { opacity: 0.6; }
 
         .location-tag {
-            margin-top: 30px;
-            font-size: 10px;
+            margin-top: 40px;
+            font-size: 11px;
             letter-spacing: 4px;
             text-transform: uppercase;
             color: #aaa;
         }
 
-        footer { padding: 60px; text-align: center; font-size: 10px; letter-spacing: 3px; color: #aaa; border-top: 1px solid #eee; position: absolute; bottom: 0; width: 100%; box-sizing: border-box; }
+        footer { padding: 60px; text-align: center; font-size: 10px; letter-spacing: 3px; color: #aaa; border-top: 1px solid #eee; position: absolute; bottom: 0; width: 100%; box-sizing: border-box; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html"><img src="logo.png" alt="FINA Home Design Logo" class="main-logo"></a>
+        <a href="index.html">
+            <img src="assets/FINA Home Design.png" alt="FINA Home Design Logo" class="main-logo">
+        </a>
         <div class="nav-links">
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About</a>
@@ -60,12 +65,16 @@
 
     <div class="contact-container">
         <h1>Inquire</h1>
-        <p style="margin-bottom: 40px; color: #666;">For all staging and design inquiries, please contact us via email:</p>
-        <a href="mailto:finahomedesign@gmail.com" class="email-link">finahomedesign@gmail.com</a>
+        <p style="margin-bottom: 20px; color: #666; font-size: 14px; letter-spacing: 1px; text-transform: uppercase;">For all staging and design inquiries, please reach out via phone or email:</p>
+        
+        <a href="tel:2084405575" class="contact-link">208.440.5575</a>
+        <br>
+        <a href="mailto:finahomedesign@gmail.com" class="contact-link">finahomedesign@gmail.com</a>
+        
         <p class="location-tag">Serving Boise & The Treasure Valley</p>
     </div>
 
-    <footer>CURATED BY NICOLLE FINA &copy; 2026</footer>
+    <footer>Curated by Nicolle Fina &copy; 2026 | Boise &bull; Eagle &bull; Meridian</footer>
 
 </body>
 </html>
